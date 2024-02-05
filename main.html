@@ -5,54 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>supportninja</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Karla:wght@700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
-      <img class= "logo" src="assets/supportninja-logo.svg" alt="supportninja logo">
-      <img class= "text-logo" src="assets/text-logo.svg" alt="text logo">
-      <nav class="nav">
+      <div class="complete-logo , container">
+        <img class= "logo" src="assets/supportninja-logo.svg" alt="supportninja logo">
+        <img class= "text-logo" src="assets/text-logo.svg" alt="text logo">
+      </div>
+      <nav class="nav , container">
         <svg class= "burger-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z" fill="currentColor" /><path d="M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z" fill="currentColor" />
           <path d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z" fill="currentColor" />
         </svg>
       </nav>
     </header>
-    <main>
-      <section class="hero">
-        <h1>Outsourcing worth talking about</h1>
-        <h2>Quickly and seamlessly scale your team with agile, highly customizable outsourcing solutions that power your growth.
+    <main class="main">
+      <section class="hero , container">
+        <h1 class="hero-title">Outsourcing worth talking about</h1>
+        <h2 class="hero-text">Quickly and seamlessly scale your team with agile, highly customizable outsourcing solutions that power your growth.
         </h2>
       </section>
       <div class="horizontal-line">
       </div>
-      <section class="choose-solution">
-        <h3> Which outsourcing solutions are you looking for? </h3>
-        <p> Choose as many as you need. </p>
+      <section class="choose-solution , container">
+        <div class="choose-solution-text">
+          <h3> Which outsourcing solutions are you looking for? </h3>
+          <p> Choose as many as you need. </p>
+        </div>
         <div class="solutions">
-          <div>
-            <img src="assets/customer-succes.webp" alt="customer succes illustration">
-            <p> Customer Success </p>
-          </div>
-          <div>
-            <img src="assets/technical-support.webp" alt="technical support illustration">
-            <p> Technical Support </p>
-          </div>
-          <div>
-            <img src="assets/content-moderator.webp" alt="content moderator illustration">
-            <p> Content Moderation </p>
-          </div>
+          <label class="label-for-solution-item">
+            <div class="solutions-item">
+              <img src="assets/customer-succes.webp" alt="customer succes illustration">
+              <label class="label-for-checkbox">
+                <input type="checkbox" name="select">
+              </label>
+              <p> Customer Success </p>
+            </div>
+          </label>
+          <label>
+            <div class="solutions-item">
+              <img src="assets/technical-support.webp" alt="technical support illustration">
+              <label>
+                <input type="checkbox" name="select">
+              </label>
+              <p> Technical Support </p>
+            </div>
+          </label>
+          <label>
+            <div class="solutions-item">
+              <img src="assets/content-moderator.webp" alt="content moderator illustration">
+              <label>
+                <input type="checkbox" name="select">
+              </label>
+              <p> Content Moderation </p>
+            </div>
+          </label>
         </div>
-        <button class="start"> Get started
-          <div>
+        <button class="button"> Get started
+          <div class="button-arrow">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" />
-          </svg>
-        </div>
+              <path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="#ee4b4a"/>
+            </svg>
+          </div>
          </button>
       </section>
-      <section class="logo-cloud">
+      <section class="logo-cloud , container">
         <h2> Driving better business results for 200+ companies. </h2>
         <div class="companies">
           <img src="assets/gates-foundation.svg" alt="gates fondation logo">
@@ -62,7 +84,7 @@
           <img src="assets/red-week.svg" alt="red week logo">
           <img src="assets/product-madness.svg" alt="product madness logo">
         </div>
-      </section>
+      </sect.ion>
     </main>
     <section class="article">
       <div class="article-item">
