@@ -17,6 +17,8 @@
   --button-red: #ee4b4a;
   --button-red-rgb: 238,75,74;
   --main-black: #2b2c30;
+  --green-button: #0d3a23;
+  --green-button-rgb: rgb(13,58,35);
   --body-margin: 1rem;
   --alpha: 80%;
 }
@@ -24,6 +26,7 @@
 .container {
   margin-left: var(--body-margin);
   margin-right: var(--body-margin);
+  margin: 3rem;
 }
 
 .header {
@@ -48,6 +51,11 @@
   flex-direction: column;
   background: var(--background-pink);
   width: 100%;
+  --mask:
+    radial-gradient(136.40px at 50% calc(100% - 183.00px),#000 99%,#0000 101%) calc(50% - 122px) 0/244px 100%,
+    radial-gradient(136.40px at 50% calc(100% + 122.00px),#0000 99%,#000 101%) 50% calc(100% - 61px)/244px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
 }
 
 .hero {
@@ -147,6 +155,7 @@
     color: var(--main-black);
     text-align: center;
     font-size: 130%;
+    padding: 0.1rem;
   }
 
   & p {
@@ -206,6 +215,7 @@
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-radius: 25px;
+  margin-bottom: 8rem;
 
   & h2 {
     font-family: 'Roboto', sans-serif;
@@ -226,9 +236,172 @@
   }
 }
 
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 
+  & .article-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 
+    & h1 {
+      font-family:'Playfair Display', serif;
+      color: var(--main-black);
+      font-size: 250%;
+      font-weight: 500;
+      line-height: 3rem;
+    }
 
+    & p {
+      font-family: 'Dosis', sans-serif;
+      color: var(--main-black);
+      line-height: 1.5rem;
+    }
+
+    & .plant {
+      height: 10rem;
+      width: 10rem;
+    }
+  }
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+
+  & .features-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & img {
+      padding: 1rem 0;
+    }
+
+    & h1 {
+      font-family: 'Dosis', sans-serif;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    & p {
+      font-family:'Dosis', sans-serif;
+    }
+
+    & a {
+    text-decoration: none;
+    color: var(--main-black);
+    font-weight: 300;
+    }
+
+    & .features-item-link {
+      display: flex;
+
+      & a {
+      font-weight: 800;
+      margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.testimonials {
+
+  & h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 230%;
+    font-weight: 600;
+    text-align: center;
+    color: var(--main-black);
+    margin-bottom: 1rem;
+  }
+
+  & .testimonials-item {
+    background-color: var(--background-pink);
+    padding: 4rem 2rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+
+    & p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      text-align: center;
+      font-weight: 300;
+      line-height: 1.7rem;
+    }
+
+    & .testimony-name {
+      font-family: 'Karla', sans-serif;
+      font-style: normal;
+      font-size: 90%;
+    }
+
+    & .testimony-title {
+      font-style: normal;
+      font-size: 70%;
+    }
+
+    & button {
+      border: none;
+      background-color: var(--green-button);
+      border-radius: 100px;
+      box-sizing: border-box;
+      display: inline-flex;
+      color: var(--background-white);
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      gap: 1rem;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+}
+
+.steps {
+  background-color: var(--grey-color);
+  padding: 2rem 0;
+
+  & .steps-intro {
+    display: grid;
+
+    & h1 {
+      text-align: center;
+      margin: 3rem;
+      font-size: 220%;
+      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+      color: var(--main-black);
+      line-height: 3rem;
+    }
+
+    & p {
+      font-family: 'Dosis', sans-serif;
+      line-height: 2rem;
+      color: var(--main-black);
+    }
+
+    & button {
+      border: none;
+      background-color: var(--green-button);
+      border-radius: 100px;
+      box-sizing: border-box;
+      display: inline-flex;
+      color: var(--background-white);
+      justify-content: center;
+      padding: 1rem 2rem;
+      gap: 1rem;
+      text-align: center;
+      margin: 3rem auto;
+    }
+  }
+}
 
 
 
