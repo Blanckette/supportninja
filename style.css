@@ -368,24 +368,32 @@
   background-color: var(--grey-color);
   padding: 2rem 0;
 
+  & .background {
+    background-image: url("assets/world-background-image.svg");
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  & h1 {
+    text-align: center;
+    margin: 3rem;
+    font-size: 220%;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    color: var(--main-black);
+    line-height: 3rem;
+  }
+
+  & p {
+    font-family: 'Dosis', sans-serif;
+    line-height: 2rem;
+    color: var(--main-black);
+  }
+
   & .steps-intro {
     display: grid;
-
-    & h1 {
-      text-align: center;
-      margin: 3rem;
-      font-size: 220%;
-      font-weight: 600;
-      font-family: 'Playfair Display', serif;
-      color: var(--main-black);
-      line-height: 3rem;
-    }
-
-    & p {
-      font-family: 'Dosis', sans-serif;
-      line-height: 2rem;
-      color: var(--main-black);
-    }
 
     & button {
       border: none;
@@ -401,13 +409,81 @@
       margin: 3rem auto;
     }
   }
+
+  & .steps-points {
+    display: flex;
+    flex-direction: column;
+
+    & .approach {
+      margin-bottom: 3rem;
+    }
+
+    & h2 {
+      font-family: 'Dosis', sans-serif;
+      color: var(--main-black);
+      font-size: 110%;
+      margin-bottom: 2rem;
+    }
+
+    & .white-buttons {
+
+      & button {
+        border: none;
+        background-color: var(--background-white);
+        border-radius: 100px;
+        color: var(--main-black);
+        padding: 0.5rem 1rem;
+        width: 49%;
+
+       /* &:hover {
+          background-color: red;
+        }*/
+
+        &.management-button:active {
+          background-color: red;
+        }
+
+        &.talent-button:active {
+          background-color: yellow;
+        }
+      }
+    }
+
+    & button {
+      border: none;
+      background-color: var(--green-button);
+      border-radius: 100px;
+      box-sizing: border-box;
+      display: inline-flex;
+      color: var(--background-white);
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      gap: 1rem;
+      text-align: center;
+      vertical-align: middle;
+      padding: 1rem 0;
+    }
+
+    & span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: var(--background-white);
+      color: var(--main-black);
+    }
+  }
 }
 
+.management {
+  display: none;
 
-
-
-
-
+  &:has(.management-button:active) {
+  display: block;
+  }
+}
 
 
 
