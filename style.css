@@ -21,6 +21,8 @@
   --green-button-rgb: rgb(13,58,35);
   --body-margin: 1rem;
   --alpha: 80%;
+  --title-font:'Playfair Display', serif;
+  --article-font:'Dosis', sans-serif;
 }
 
 .container {
@@ -407,6 +409,12 @@
       gap: 1rem;
       text-align: center;
       margin: 3rem auto;
+      border: 0.1rem solid var(--green-button);
+
+      &:hover {
+        background-color: transparent;
+        color: var(--green-button-rgb);
+      }
     }
   }
 
@@ -450,7 +458,7 @@
     }
 
     & button {
-      border: none;
+      border: 0.1rem solid var(--green-button);
       background-color: var(--green-button);
       border-radius: 100px;
       box-sizing: border-box;
@@ -462,6 +470,11 @@
       text-align: center;
       vertical-align: middle;
       padding: 1rem 0;
+
+      &:hover {
+        background-color: transparent;
+        color: var(--green-button);
+      }
     }
 
     & span {
@@ -485,10 +498,110 @@
   }
 }
 
+.story {
 
+  & .story-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
+    & h1 {
+      font-family: var(--title-font);
+      color: var(--main-black);
+      font-size: 220%;
+      font-weight: 500;
+    }
+    & p {
+      font-family: var(--article-font);
+    }
+    & button {
+      background-color: var(--green-button);
+      border: none;
+      border-radius: 100px;
+      padding: 1rem;
+      color: var(--background-white);
+      border: 0.1rem solid var(--green-button);
+      box-sizing: border-box;
+      width: 33%;
+      font-size: 13px;
+      transition: 0.3s;
 
+      &:hover {
+        background-color: transparent;
+        color: var(--green-button-rgb);
+      }
+    }
+  }
 
+  & .story-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+    margin: 3rem 0;
+    position: relative;
 
+    .photo {
+      background-color: var(--grey-color);
+      border-radius: 10px;
 
+      & > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        object-position: top;
+        border-radius: 10px;
+      }
+    }
+
+    & .item3 {
+      position: relative;
+      top: -1rem;
+      left: -1.5rem;
+      box-shadow: 0 0 0.5rem var(--main-black);
+    }
+
+    & .item5 {
+      position: relative;
+      top: 1rem;
+      left: -1rem;
+      box-shadow: 0 0 0.5rem var(--main-black);
+    }
+
+    & .item2 {
+      background-color: var(--background-pink);
+    }
+  }
+}
+
+.meeting {
+  position: relative;
+
+  & img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 3rem 0;
+  }
+
+  & .red-note {
+    background-color: var(--background-pink);
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 14rem;
+    left: 3rem;
+    box-shadow: 0 0 0.5rem var(--main-black);
+  }
+}
+
+.last {
+  background-color: var(--background-pink);
+
+  & img {
+    width: 100%;
+  }
+}
 
