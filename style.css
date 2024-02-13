@@ -666,11 +666,14 @@
 
 .story {
   padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
   & .story-item {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 5rem;
 
     & h1 {
       font-family: var(--title-font);
@@ -680,6 +683,7 @@
     }
     & p {
       font-family: var(--article-font);
+      line-height: 2rem;
     }
     & button {
       background-color: var(--green-button);
@@ -702,6 +706,11 @@
     @media (width >= 992px) {
       display: flex;
       flex-direction: row;
+      align-items: flex-start;
+
+      & h1 {
+        font-size: 270%;
+      }
     }
   }
 
@@ -744,11 +753,29 @@
     & .item2 {
       background-color: var(--background-pink);
     }
+
+    @media (width >= 992px) {
+      flex: 1;
+    }
   }
+}
+
+.story-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+#story-item2 {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .meeting {
   position: relative;
+  display: flex;
+  flex: 1;
 
   & img {
     width: 100%;
@@ -762,9 +789,11 @@
     height: 8rem;
     display: flex;
     justify-content: center;
-    position: relative;
-    top: -10rem;
-    left: 3rem;
+    position: absolute;
+    top: auto;
+    bottom: -2rem;
+    left: 2rem;
+    right: auto;
     box-shadow: 0 0 0.5rem var(--main-black);
   }
 }
@@ -810,6 +839,25 @@
   }
 }
 
+.last-item {
+  @media (width >= 992px) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    & img {
+      width: 50%;
+      padding: 5rem;
+    }
+    & .last-item-text {
+      flex: 1;
+      margin: 2rem;
+    }
+    & .button {
+      width: 70%;
+    }
+  }
+}
+
 footer {
   background-color: var(--grey-color);
   padding: 3rem 0;
@@ -820,10 +868,20 @@ footer {
 
     & .first-column {
       flex: 1;
+      @media (width >= 992px) {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
     }
 
     & .second-column {
       flex: 1;
+      @media (width >= 992px) {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
     }
   }
 
