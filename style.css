@@ -36,7 +36,7 @@
     margin-right: var(--body-margin-large);
   }
 
-  @media (width >= 1536px) {
+  @media (width >= 2060px) {
     margin-left: var(--body-margin-xxl);
     margin-right: var(--body-margin-xxl);
   }
